@@ -5,7 +5,7 @@ Chef::Log.info(node[:deploy])
 node[:deploy].each do |current_path, deploy|
   
   Chef::Log.info("Kill already allocated port");  
-  execute("sudo fuser -k 80/tcp")
+  #execute("sudo fuser -k 80/tcp")
   
   Chef::Log.info("npm start --prefix #{deploy[:current_path]}");
 #   Remove this tag comment in when we are going to user npm start.
