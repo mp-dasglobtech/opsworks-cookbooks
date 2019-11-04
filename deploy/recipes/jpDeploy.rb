@@ -4,8 +4,8 @@ Chef::Log.info(node[:deploy])
 
 node[:deploy].each do |current_path, deploy|
   
-  #Chef::Log.info("Kill already allocated port");  
-  #execute("sudo fuser -k 80/tcp")
+  Chef::Log.info("Kill already allocated port");  
+  execute("sudo fuser -n tcp -k 3000")
   
   
 
